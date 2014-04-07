@@ -66,4 +66,4 @@ class StixTransformer(object):
         else:
             raise Exception('No port mapping could be found for {0}'.format(event['data_type']))
 
-        return self.template.render(data)
+        return self.template.render(data).encode("utf-8")
